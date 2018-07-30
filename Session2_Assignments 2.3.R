@@ -6,12 +6,13 @@ set.seed(41)
 m = 10
 n = 10
 
-
 matrix <- replicate(m, rnorm(n))
 matrix_df <- data.frame(matrix)
-matrix_df-----#Applying nested loop along with syste time
+matrix_df
+
+-----#Applying nested loop along with syste time
   
-  system.time(for (i in 1:m) {
+system.time(for (i in 1:m) {
     for (j in 1:n)
       matrix_df [i, j] <- matrix_df [i, j] + 10 * sin(0.50 * pi)
   })
@@ -22,7 +23,6 @@ matrix_df
 set.seed(41)
 m = 10
 n = 10
-
 
 matrix <- replicate(m, rnorm(n))
 matrix_df <- data.frame(matrix)
